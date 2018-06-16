@@ -1,0 +1,177 @@
+/*font-family: 'Cabin Sketch', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Raleway Dots', cursive;*/
+
+body {
+padding: 0;
+margin:0;
+background-color: #110019;
+color: #fff;
+overflow-x: hidden;
+}
+
+
+.myNam{ position: absolute; right: 20px; top: 10px; z-index: 1111; font-size: 18px; font-family: 'Calligraffitti', cursive;}
+.starshine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}    
+    
+.shine {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-image: url('../img/star.png');
+background-repeat: no-repeat;
+background-position:center;
+background-size: 100% 100%;
+  overflow: hidden;
+  z-index: 2;
+  color: tansparent;
+  -moz-opacity: 0.0;
+  opacity: 0.0;
+  animation: glitter 6s linear 0s infinite normal;
+  -webkit-animation: glitter 6s linear 0s infinite normal;
+  -moz-animation: glitter 8s linear 0s infinite normal;
+  -ms-animation: glitter 8s linear 0s infinite normal;
+  -o-animation: glitter 8s linear 0s infinite normal;
+}
+
+.shine.small {
+  width: 20px;
+  height: 20px;
+}
+
+.shine.medium {
+  width: 30px;
+  height: 30px;
+}
+
+.shine.large {
+  width: 50px;
+  height: 50px;
+}
+
+/*CSS3 keyframes for glittering effect*/
+@-webkit-keyframes glitter {
+  0% {
+    -webkit-transform: scale(0.3) ;
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.3);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+/*name start*/
+
+  .container>.text,
+    .container>.shadow {
+        position: absolute;
+        margin: 0;
+        top: 10%;
+        right:  0;
+        font-size: 5rem;
+        letter-spacing: 20px;
+        font-family: 'Cinzel Decorative', cursive;
+        color: #fff;
+    }
+
+    .container>.text>.blink {
+        color: #333;
+    }
+
+    .container>.shadow {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+
+   .container>.shadow>#glow {
+        animation: neon1 linear infinite 2s;
+        will-change: opacity;
+    }
+
+    .container>.shadow>#blink {
+        animation: blink linear infinite 2s;
+    }
+
+
+    @keyframes neon1 {
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 0.7;
+        }
+    }
+
+
+    @keyframes blink {
+        78% {
+            opacity: 1;
+        }
+        79% {
+            opacity: 0;
+        }
+        81% {
+            opacity: 1;
+        }
+        82% {
+            opacity: 0;
+        }
+        83% {
+            opacity: 1;
+        }
+        92% {
+            opacity: 0;
+        }
+        92.5% {
+            opacity: 1;
+        }
+    }  
+/*name end*/
+
+
+
+.moon {
+    max-width: 200px;
+    width: 100%;
+}
+.moon img{ width: 100%; }
+
+.img1 svg{ position: absolute; left: 0; bottom: 10px;  width: 100%;}
+
+@media screen and (max-width: 768px) {
+  .myNam{ 
+    top: 15px;
+    right: 20px;
+    }
+
+.moon {
+    max-width: 100px;
+}
+.container>.text, .container>.shadow {
+top: 40%;
+right: unset;
+font-size: 30px;
+left: 15%;
+letter-spacing: 2px;
+   
+}
+
+  }
